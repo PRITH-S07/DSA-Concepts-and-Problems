@@ -34,14 +34,19 @@ class Solution(object):
                 list2=list2.next if list2 else None
         if list1!=None:
             while list1:
-                newNode=ListNode(list1.val)
+                #newNode=ListNode(list1.val)
+                newNode=list1
+                #curr.next=newNode
                 curr.next=newNode
                 curr=newNode
-                list1=list1.next if list1 else None
+                #list1=list1.next if list1 else None
+                break
         elif list2!=None:
             while list2:
-                newNode=ListNode(list2.val)
+                #newNode=ListNode(list2.val)
+                newNode=list2
                 curr.next=newNode
                 curr=newNode
-                list2=list2.next if list2 else None
+                #list2=list2.next if list2 else None
+                break
         return dummyhead.next
